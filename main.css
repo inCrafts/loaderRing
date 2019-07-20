@@ -1,0 +1,59 @@
+/*    Анимация кольца    */
+
+@keyframes animate {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: verdana;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.ring {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 4px 0 #262626;
+	box-shadow: 0 4px 0 #262626;
+	background-color: transparent;
+	animation: animate 1s linear infinite;
+}
+
+.loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+	box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+	text-align: center;
+	line-height: 300px;
+	font-size: 2em;
+	background-color: transparent;
+	color: #262626;
+}
